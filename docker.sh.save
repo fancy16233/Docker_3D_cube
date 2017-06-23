@@ -1,0 +1,8 @@
+afaf7b6bf309#!/bin/bash
+
+sudo docker rm app
+sudo docker rmi app
+
+sudo docker build -t app .
+sudo docker start
+sudo docker run  -i -t -d -name=app -p 8080:80 app 
